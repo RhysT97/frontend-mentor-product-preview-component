@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --dark-blue: hsl(212, 21%, 14%);
+  --dark-gray: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--cream);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.product-card {
+  color: var(--dark-gray);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100% 100%;
+  border-radius: 10px;
+  background-color: var(--white);
+  place-self: center;
+  max-width: 700px;
+  
+}
+
+.product-category {
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.product-info {
+  padding: 2rem;
+}
+
+.product-title, .product-price {
+  font-family: 'Fraunces', serif; 
+}
+
+.product-title {
+  color: black;
+}
+
+.product-img {
+  background: url("images/image-product-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: 100%;
+  border-radius: 10px;
+}
+
+.cart-btn {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  outline: none;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-pricings {
+  display: flex;
+  align-items: center;
+}
+
+.product-price {
+  color: var(--dark-cyan);
+  margin-right: 2rem;
+}
+
+.rrp {
+  text-decoration: line-through;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 650px) {
+
+  body {
+
+  }
+  .product-img {
+    background: url(images/image-product-mobile.jpg);
+    margin: auto;
+    display: block;
+  }
+
+  .product-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100%;
+  }
+
+  .product-info {
+    background-color: var(--white);
+  }
+}
